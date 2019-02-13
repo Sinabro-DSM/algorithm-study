@@ -1,37 +1,20 @@
-//[6,10,2]
-//뒤에 0을붙이면?
-
 function solution(numbers) {
     var answer = '';
-    let temp;
-    let number = numbers.toString();
-
-    for(let i in number){
-        if((number[i]+number[i+1]) < ())
+    let temp = 0;
+    let zero = 0;
+    for(let i = numbers.length;i >0; i--){
+        for(let j = 0;j<i;j++){
+            if(numbers[i]==0){zero +=1;
+                             console.log(zero)}
+            if((String(numbers[j])+String(numbers[j+1]))*1 < (String(numbers[j+1])+String(numbers[j]))*1){
+                temp = numbers[j];
+                numbers[j] = numbers[j+1];
+                numbers[j+1] = temp;
+            }
+        }
     }
-
-console.log(numbers);
-    return answer;
+    console.log(numbers)
+    if(zero == numbers.length){answer = '0'}
+    else{answer = numbers.join('');}
+    return answer;   
 }
-
-
-//---------------
-/*for(let i=0;i<numbers.length; i++){
-    if(String(numbers[i]).length == String(numbers[i+1]).length){
-        if(numbers[i]<number[i+1]){
-            temp = number[i];
-            number[i] = number[i+1];
-            number[i+1] = temp;
-        }
-    }
-    else{
-        if(String(number[i])+String(number[i+1])<String(number[i+1])+String(number[i])){
-            temp = number[i];
-            number[i] = number[i+1];
-            number[i+1] = temp;
-        }
-    }
-}*/
-
-//---------------------------------------
-(String(numbers[j])+String(numbers[j+1]))*1 < (String(numbers[j+1])+String(numbers[j]))*1
