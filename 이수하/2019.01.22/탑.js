@@ -14,7 +14,7 @@ function solution(heights){
                     answer.unshift(j);
                     break;
                 }
-                answer.unshift(0) 
+                answer.unshift(0)  ``
             }
         }
     }
