@@ -18,4 +18,6 @@ function solution(skill, skill_trees) {
     }
     if(flag) answer++;
   }  return answer;
+
+  
 }
