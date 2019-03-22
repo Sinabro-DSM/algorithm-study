@@ -15,5 +15,4 @@ function solution(clothes) {
     }
         return num-1;
 }
-let clothes = 	[["crow_mask", "face"], ["blue_sunglasses", "face"], ["smoky_makeup", "face"]];
 console.log(solution(clothes));
